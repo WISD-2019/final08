@@ -26,7 +26,7 @@ class CreateApplicationsTable extends Migration
             $table->string('size');
             $table->string('adoptionstatus_date');
             $table->boolean('track_date');
-            $table->boolean('track_description');
+            $table->string('track_description');
             $table->string('housing_date');
             $table->timestamps();
         });

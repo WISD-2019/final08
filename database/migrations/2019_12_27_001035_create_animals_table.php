@@ -13,12 +13,14 @@ class CreateAnimalsTable extends Migration
      */
     public function up()
     {
-        $table->bigIncrements('id');
-        $table->unsignedInteger('animal_id');
-        $table->string('return_date');
-        $table->string('status');
-        $table->timestamps();
-    }
+        Schema::create('animals', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedInteger('animal_id');
+            $table->string('return_date');
+            $table->string('status');
+            $table->timestamps();
+        });
+}
 
     /**
      * Reverse the migrations.
