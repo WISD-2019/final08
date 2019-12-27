@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateShelterTable‐‐create extends Migration
+class CreateAdminsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,11 @@ class CreateShelterTable‐‐create extends Migration
      */
     public function up()
     {
-        $table->bigIncrements('id');
-        $table->unsignedInteger('user_id');
-        $table->string('name');
-        $table->string('phone');
-        $table->string('address');
-        $table->bloon('public');
-        $table->timestamps();
+        Schema::create('admins', function (Blueprint $table) {
+            $table->bigIncrements('id');
+            $table->unsignedInteger('user_id');
+            $table->timestamps();
+        });
     }
 
     /**
@@ -29,6 +27,6 @@ class CreateShelterTable‐‐create extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('shelter');
+        Schema::dropIfExists('admins');
     }
 }

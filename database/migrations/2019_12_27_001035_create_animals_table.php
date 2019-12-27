@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAdoptionStatusTable‐‐create extends Migration
+class CreateAnimalsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,11 @@ class CreateAdoptionStatusTable‐‐create extends Migration
      */
     public function up()
     {
-        //
+        $table->bigIncrements('id');
+        $table->unsignedInteger('animal_id');
+        $table->string('return_date');
+        $table->string('status');
+        $table->timestamps();
     }
 
     /**
@@ -23,6 +27,6 @@ class CreateAdoptionStatusTable‐‐create extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('adoption_status');
+        Schema::dropIfExists('animal');
     }
 }
