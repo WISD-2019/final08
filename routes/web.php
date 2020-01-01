@@ -18,3 +18,6 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+//顯示所有收容所
+Route::get('/shelter', ['as' => 'shelter.show','uses' =>'ShelterController@show']);

@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 use app\staff;
 class shelter extends Model
 {
-    protected $table = 'shelter';
+    protected $table = 'shelters';
 
     protected $fillable = [
         'user_id', 'name', 'phone','address','public'

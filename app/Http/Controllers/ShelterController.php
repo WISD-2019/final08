@@ -44,9 +44,11 @@ class ShelterController extends Controller
      * @param  \App\shelter  $shelter
      * @return \Illuminate\Http\Response
      */
-    public function show(shelter $shelter)
+    public function show()
     {
-        //
+        $shelters = shelter::all();
+        $data = ['shelters' => $shelters];
+        return view('shelter',$data);
     }
 
     /**
