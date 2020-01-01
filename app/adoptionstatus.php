@@ -3,7 +3,7 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
-use app\animal;
+use app\animals;
 
 class adoptionstatus extends Model
 {
@@ -15,8 +15,8 @@ class adoptionstatus extends Model
 
     public $timestamps = false;
 
-    public function animal(){
-        return $this->hasone(animal::class);
+    public function animals(){
+        return $this->hasone(animals::class);
     }
 
 }

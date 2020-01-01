@@ -9,7 +9,7 @@ use app\shelter;
 use app\application;
 class animal extends Model
 {
-    protected $table = 'animal';
+    protected $table = 'animals';
 
     protected $fillable = [
         'member_id','staff_id','shelter_id','application','kind','variety','gender','age','size','adoptionstatus_date','track_date','track_description','housing_date'

@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use app\staff;
+use app\aniaml;
 class shelter extends Model
 {
     protected $table = 'shelters';

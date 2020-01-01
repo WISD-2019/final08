@@ -15,19 +15,15 @@ class CreateApplicationsTable extends Migration
     {
         Schema::create('application', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->unsignedInteger('member_id');
             $table->unsignedInteger('staff_id');
-            $table->unsignedInteger('shelter_id');
-            $table->unsignedInteger('application_id');
-            $table->string('kind');
-            $table->string('variety');
-            $table->string('gender');
-            $table->string('age');
-            $table->string('size');
-            $table->string('adoptionstatus_date');
-            $table->boolean('track_date');
-            $table->string('track_description');
-            $table->string('housing_date');
+            $table->string('reason');
+            $table->string('environment');
+            $table->string('pose_date');
+            $table->string('evluation_date');
+            $table->string('evluation_opinion');
+            $table->string('review_date');
+            $table->boolean('pass');
+            $table->string('pass_opinion');
             $table->timestamps();
         });
     }
