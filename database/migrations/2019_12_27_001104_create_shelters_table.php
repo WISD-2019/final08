@@ -19,7 +19,7 @@ class CreateSheltersTable extends Migration
         $table->string('name');
         $table->string('phone');
         $table->string('address');
-        $table->blooean('public');
+        $table->boolean('public');
         $table->timestamps();
         });
     }
