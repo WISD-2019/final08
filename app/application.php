@@ -11,7 +11,7 @@ class application extends Model
     protected $table = 'application';
 
     protected $fillable = [
-        'staff_id', 'reason', 'environment','pose_date','evaluation_date','evaluation_opinion','review_date','pass','pass_opinion'
+        'staff_id', 'member_id' ,'animal_id', 'reason', 'environment','pose_date','evaluation_date','evaluation_opinion','review_date','pass','pass_opinion'
     ];
 
     public $timestamps = false;

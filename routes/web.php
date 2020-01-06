@@ -28,3 +28,5 @@ Route::get('/animal/all', ['as' => 'animal.show','uses' =>'AnimalController@show
 Route::get('/animal/search', ['as' => 'animal.search','uses' =>'AnimalController@search']);
 //申請領養動物
 Route::get('/application/create/{animal}', ['as' => 'applicaion.create','uses' =>'ApplicationController@create']);
+//儲存領養資訊
+Route::get('/application/create/{animal}/store', ['as' => 'applicaion.store','uses' =>'ApplicationController@store']);

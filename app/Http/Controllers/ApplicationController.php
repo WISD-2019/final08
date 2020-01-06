@@ -21,9 +21,18 @@ class ApplicationController extends Controller
         return view('application',$data);
     }
 
-    public function store(Request $request)
+    public function store(Request $request,$id)
     {
-
+        $reason=$request->input('reason');
+        $environment=$request->input('environment');
+        application::create([
+            'animal_id' => $id,
+            'member_id' => auth()->user()->id,
+            'reason' =>$reason,
+            'environment' => $environment,
+            'pose_date' => date("Y-m-d",strtotime('8hours'))
+        ]);
+        return view('welcome');
     }
 
 

@@ -78,7 +78,7 @@
                     @endauth
         </div>
     @endif
-    <form>
+    <form action="/application/create/{{ $animal->id }}/store" method="GET">
         <div>
             <div>
                 <h4>
