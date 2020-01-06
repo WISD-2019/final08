@@ -4,7 +4,7 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 use app\staff;
-use app\aniaml;
+use app\animal;
 class shelter extends Model
 {
     protected $table = 'shelters';
@@ -21,6 +21,6 @@ class shelter extends Model
     }
     public function aniaml()
     {
-        return $this->hasmany(aniaml::class);
+        return $this->hasmany(animal::class);
     }
 }
