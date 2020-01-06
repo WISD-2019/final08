@@ -20,7 +20,7 @@ class CreateAnimalsTable extends Migration
             $table->unsignedInteger('shelter_id');
             $table->unsignedInteger('applciation_id');
             $table->string('kind');
-            $table->string('vartiety');
+            $table->string('variety');
             $table->string('gender');
             $table->string('age');
             $table->string('size');

@@ -21,3 +21,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 //顯示所有收容所
 Route::get('/shelter', ['as' => 'shelter.show','uses' =>'ShelterController@show']);
+
+//顯示所有動物
+Route::get('/animal/all', ['as' => 'animal.show','uses' =>'AnimalController@show']);
+
