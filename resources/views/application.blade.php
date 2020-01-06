@@ -78,39 +78,41 @@
                     @endauth
         </div>
     @endif
+    <form>
         <div>
-            <form action="{{ route('animal.search') }}">
-                <div >
-                    <input type="text" name="keyword" placeholder="尋找動物">
-                    <button>搜尋</button>
-                </div>
-            </form>
-            <table border=1>
-                <thead>
-                <tr>
-                    <th width="100" style="text-align: center">種類</th>
-                    <th width="100" style="text-align: center">品種</th>
-                    <th width="100" style="text-align: center">性別</th>
-                    <th width="100" style="text-align: center">年齡</th>
-                    <th width="100" style="text-align: center">體型</th>
-                    <th width="100" style="text-align: center"></th>
-                </tr>
-                </thead>
-                <tbody>
-                @foreach($animals as $animal)
-                    <tr>
-                        <th style="text-align: center">{{$animal->kind}}</th>
-                        <th style="text-align: center">{{$animal->variety}}</th>
-                        <th style="text-align: center">{{$animal->gender}}</th>
-                        <th style="text-align: center">{{$animal->age}}</th>
-                        <th style="text-align: center">{{$animal->size}}</th>
-                        <th style="text-align: center"><a href="/application/create/{{$animal->id}}">申請領養</a></th>
-                    </tr>
-                @endforeach
-                </tbody>
-            </table>
+            <div>
+                <h4>
+                    <label>種類：</label>
+                    <td>{{$animal->kind}}</td>
+                </h4>
+            </div>
+            <div>
+                <h4>
+                    <label>品種：</label>
+                    <td>{{$animal->variety}}</td>
+                </h4>
+            </div>
+            <div>
+                <h4>
+                    <label>性別：</label>
+                    <td>{{$animal->gender}}</td>
+                </h4>
+            </div>
+            <div>
+                <h4>
+                    <label>年齡：</label>
+                    <td>{{$animal->age}}</td>
+                </h4>
+            </div>
+            <div>
+                <a>領養原因：</a><input type="text" name="reason" placeholder="領養原因">
+            </div>
+            <div>
+                <a>居住環境描述：</a><input type="text" name="environment" placeholder="居住環境描述">
+            </div>
+            <button>送出</button>
         </div>
-
+    </form>
 </div>
 </body>
 </html>

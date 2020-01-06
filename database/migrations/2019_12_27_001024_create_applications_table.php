@@ -16,6 +16,8 @@ class CreateApplicationsTable extends Migration
         Schema::create('application', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedInteger('staff_id');
+            $table->unsignedInteger('member_id');
+            $table->unsignedInteger('animal_id');
             $table->string('reason');
             $table->string('environment');
             $table->string('pose_date');
