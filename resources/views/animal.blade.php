@@ -79,7 +79,12 @@
         </div>
     @endif
         <div>
-
+            <form action="{{ route('animal.search') }}">
+                <div >
+                    <input type="text" name="keyword" placeholder="尋找動物">
+                    <button>搜尋</button>
+                </div>
+            </form>
             <table border=1>
                 <thead>
                 <tr>

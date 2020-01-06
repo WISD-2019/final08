@@ -25,3 +25,6 @@ Route::get('/shelter', ['as' => 'shelter.show','uses' =>'ShelterController@show'
 //顯示所有動物
 Route::get('/animal/all', ['as' => 'animal.show','uses' =>'AnimalController@show']);
 
+//搜尋動物編號
+Route::get('/animal/search', ['as' => 'animal.search','uses' =>'AnimalController@search']);
+

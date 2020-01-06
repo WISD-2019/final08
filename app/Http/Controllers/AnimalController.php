@@ -31,7 +31,13 @@ class AnimalController extends Controller
         return view('animal',$data);
     }
 
-
+    public function search(Request $request)
+    {
+        $keyword =$request->input('keyword');
+        $animals = animal::where('id','LIKE',"%$keyword%")->get();
+        $data = ['animals' => $animals];
+        return view('animal',$data);
+    }
 
     public function edit(animal $animal)
     {
