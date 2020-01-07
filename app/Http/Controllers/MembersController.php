@@ -74,7 +74,7 @@ class MembersController extends Controller
         $phone=$request->input('phone');
 
         $users = Auth::user()->id;
-        $members = members::where('user_id',$users)->get();
+        $members = members::where('user_id',auth()->user()->id)->get();
         $members ->date = $date;
         $members ->number = $number;
         $members ->phone = $phone;

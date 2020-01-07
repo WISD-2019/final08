@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\animal;
 use App\staff;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class StaffController extends Controller
 {
@@ -81,5 +83,31 @@ class StaffController extends Controller
     public function destroy(staff $staff)
     {
         //
+    }
+
+    public function addanimal()
+    {
+        return view('addanimal');
+    }
+
+    public function storeanimal(Request $request)
+    {
+        $kind=$request->input('kind');
+        $variety=$request->input('variety');
+        $gender=$request->input('gender');
+        $age=$request->input('age');
+        $size=$request->input('size');
+        $users = Auth::user()->id;
+        $staffs = staff::where('user_id',$users);
+        animal::create([
+           'staff_id' =>'2',
+           'shelter_id' =>'1',
+           'kind' => $kind,
+           'variety' => $variety,
+           'gender' => $gender,
+            'age' => $age,
+            'size' => $size
+        ]);
+        return redirect()->route('member.refuge');
     }
 }
