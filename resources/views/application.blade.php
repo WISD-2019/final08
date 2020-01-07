@@ -105,7 +105,7 @@
                 </h4>
             </div>
             <div>
-                <a>領養原因：</a><input type="text" name="reason" placeholder="領養原因">
+                <a>領養原因：</a><input type="text" name="reason" placeholder="領養原因" >
             </div>
             <div>
                 <a>居住環境描述：</a><input type="text" name="environment" placeholder="居住環境描述">

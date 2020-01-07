@@ -86,7 +86,7 @@
 
                 <div class="links">
                     <a href="">領養公告</a>
-                    <a href="">會員專區</a>
+                    <a href="{{ route('member.show') }}">會員專區</a>
                     <a href="{{ route('animal.show') }}">動物列表</a>
                     <a href="{{ route('shelter.show') }}">私、公家收容所資訊</a>
 

@@ -11,7 +11,7 @@ class members extends Model
     protected $table = 'members';
 
     protected $fillable = [
-        'user_id', 'date', 'date','number','phone'
+        'user_id', 'date','number','phone'
     ];
 
     public $timestamps = false;

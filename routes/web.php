@@ -19,6 +19,11 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+//會員資料
+Route::get('/member', ['as' => 'member.show','uses' =>'MembersController@show']);
+//儲存會員資料
+Route::get('/member/store', ['as' => 'member.store','uses' =>'MembersController@store']);
+
 //顯示所有收容所
 Route::get('/shelter', ['as' => 'shelter.show','uses' =>'ShelterController@show']);
 
