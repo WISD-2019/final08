@@ -21,6 +21,19 @@ class MembersController extends Controller
     /**
      * @param $id
      */
+
+    public function refuge()
+    {
+        if(Auth::user()==null){
+            return view('welcome');
+        }
+        $check =Auth::user()->type;
+        if($check == 1)
+            return view('welcome');
+        if($check ==2)
+            return view('welcome2');
+    }
+
     public function store(Request $request)
     {
         $date=$request->input('date');

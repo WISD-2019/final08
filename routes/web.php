@@ -11,9 +11,11 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+//Route::get('/', function () {
+//    return view('welcome');
+//});
+//首頁
+Route::get('/', ['as' => 'member.refuge','uses' =>'MembersController@refuge']);
 
 Auth::routes();
 
