@@ -48,4 +48,10 @@ Route::get('/storeanimal', ['as' => 'staff.storeanimal','uses' =>'StaffControlle
 Route::get('/shelteranimal', ['as' => 'shelter.animal','uses' =>'ShelterController@animal']);
 //刪除動物
 Route::get('/deleteanimal/{animal}', ['as' => 'staff.deleteanimal','uses' =>'StaffController@deleteanimal']);
+//跳轉至新增公告畫面
+Route::get('/createpost', ['as' => 'post.create','uses' =>'PostController@create']);
+//儲存公告
+Route::get('/storepost', ['as' => 'post.store','uses' =>'PostController@store']);
+
+
 
