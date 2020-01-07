@@ -87,6 +87,7 @@
                 <div class="links">
                     <a href="">新增公告</a>
                     <a href="{{ route('staff.addanimal') }}">新增收容動物</a>
+                    <a href="{{ route('shelter.animal') }}">動物列表</a>
                     <a href="">審核領養申請</a>
                     <a href="">追蹤領養訊息</a>
 

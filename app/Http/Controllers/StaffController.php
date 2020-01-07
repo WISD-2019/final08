@@ -110,4 +110,11 @@ class StaffController extends Controller
         ]);
         return redirect()->route('member.refuge');
     }
+
+    public function deleteanimal($id)
+    {
+        $animal = animal::find($id);
+        $animal->delete();
+        return redirect()->route('shelter.animal');
+    }
 }

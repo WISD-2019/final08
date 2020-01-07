@@ -44,4 +44,8 @@ Route::get('/application/create/{animal}/store', ['as' => 'applicaion.store','us
 Route::get('/addanimal', ['as' => 'staff.addanimal','uses' =>'StaffController@addanimal']);
 //儲存動物
 Route::get('/storeanimal', ['as' => 'staff.storeanimal','uses' =>'StaffController@storeanimal']);
+//顯示所有動物
+Route::get('/shelteranimal', ['as' => 'shelter.animal','uses' =>'ShelterController@animal']);
+//刪除動物
+Route::get('/deleteanimal/{animal}', ['as' => 'staff.deleteanimal','uses' =>'StaffController@deleteanimal']);
 

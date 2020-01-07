@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\animal;
 use App\shelter;
 use Illuminate\Http\Request;
 
@@ -83,5 +84,11 @@ class ShelterController extends Controller
     public function destroy(shelter $shelter)
     {
         //
+    }
+    public function animal()
+    {
+        $animals = animal::all();
+        $data = ['animals' => $animals];
+        return view('shelteranimal',$data);
     }
 }
