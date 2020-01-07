@@ -23,6 +23,8 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/member', ['as' => 'member.show','uses' =>'MembersController@show']);
 //儲存會員資料
 Route::get('/member/store', ['as' => 'member.store','uses' =>'MembersController@store']);
+//修改會員資料
+Route::get('/member/update', ['as' => 'member.update','uses' =>'MembersController@update']);
 
 //顯示所有收容所
 Route::get('/shelter', ['as' => 'shelter.show','uses' =>'ShelterController@show']);

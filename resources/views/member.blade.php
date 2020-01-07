@@ -93,7 +93,7 @@
                 </h4>
             </div>
             @if(count($members) == 0)
-                <form action="/member/store" method="GET" >
+                <form action="{{ route('member.store')}}" >
                     <div>
                         <h4>
                             <label>出生年月日：</label>
@@ -116,7 +116,7 @@
                 </form>
             @elseif(count($members) != 0)
                 @foreach($members as $member)
-                    <form>
+                    <form action="{{ route('member.update',$member->id)}}">
                         <div>
                             <h4>
                                 <label>出生年月日：</label>

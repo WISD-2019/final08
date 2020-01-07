@@ -18,7 +18,9 @@ class MembersController extends Controller
     {
         //
     }
-
+    /**
+     * @param $id
+     */
     public function store(Request $request)
     {
         $date=$request->input('date');
@@ -31,6 +33,7 @@ class MembersController extends Controller
             'phone' => $phone
         ]);
         return view('welcome');
+        //return redirect()->route('product.show');
     }
 
     public function show()
@@ -51,9 +54,21 @@ class MembersController extends Controller
         //
     }
 
-    public function update(Request $request, members $members)
+    public function update(Request $request)
     {
-        //
+        $date=$request->input('date');
+        $number=$request->input('number');
+        $phone=$request->input('phone');
+
+        $users = Auth::user()->id;
+        $members = members::where('user_id',$users)->get();
+        $members ->date = $date;
+        $members ->number = $number;
+        $members ->phone = $phone;
+//        $members ->update($members);
+        $members ->save();
+        $data = ['members' => $members];
+        return view('member',$data);
     }
 
     public function destroy(members $members)
