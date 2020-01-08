@@ -7,7 +7,7 @@ use app\animal;
 
 class adoptionstatus extends Model
 {
-    protected $table = 'adoptionstatus';
+    protected $table = 'adoptionstatuses';
 
     protected $fillable = [
         'animal_id','return_date','status'

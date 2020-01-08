@@ -45,10 +45,11 @@ class AdoptionstatusController extends Controller
      * @param  \App\adoptionstatus  $adoptionstatus
      * @return \Illuminate\Http\Response
      */
-    public function show(adoptionstatus $adoptionstatus)
+    public function show()
     {
-        application::all();
-        return view('');
+        $adoptionstatuses = adoptionstatus::all();
+        $data = ['adoptionstatuses' => $adoptionstatuses];
+        return view('adoptionstatus',$data);
     }
 
     /**
