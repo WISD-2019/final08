@@ -45,8 +45,7 @@ class MembersController extends Controller
             'number' => $number,
             'phone' => $phone
         ]);
-        return view('welcome');
-        //return redirect()->route('');
+        return redirect()->route('member.refuge');
     }
 
     public function show()
@@ -66,7 +65,13 @@ class MembersController extends Controller
     {
         //
     }
-
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\shelter  $shelter
+     * @return \Illuminate\Http\Response
+     */
     public function update(Request $request)
     {
         $date=$request->input('date');
