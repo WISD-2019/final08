@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\animal;
 use App\application;
+use App\User;
 use Illuminate\Http\Request;
 
 class ApplicationController extends Controller
@@ -30,7 +31,8 @@ class ApplicationController extends Controller
             'member_id' => auth()->user()->id,
             'reason' =>$reason,
             'environment' => $environment,
-            'pose_date' => date("Y-m-d",strtotime('8hours'))
+            'pose_date' => date("Y-m-d",strtotime('8hours')),
+            'pass' => '0',
         ]);
         return view('welcome');
     }
@@ -38,7 +40,11 @@ class ApplicationController extends Controller
 
     public function show(application $application)
     {
-        //
+        $applications = application::all();
+        $animals = animal::all();
+        $users = User::all();
+        $data = ['applications'=>$applications,'animals' => $animals,'users'=>$users];
+        return view('showapplication',$data);
     }
 
     public function edit(application $application)
@@ -55,5 +61,15 @@ class ApplicationController extends Controller
     public function destroy(application $application)
     {
         //
+    }
+    public function pass(Request $request,$id)
+    {
+        $pass_opinion=$request->input('pass_opinion');
+        $application = application::find($id);
+        $application->review_date=date("Y-m-d",strtotime('8hours'));
+        $application->pass = '1';
+        $application->pass_opinion=$pass_opinion;
+        $application->save();
+        return redirect()->route('application.show');
     }
 }

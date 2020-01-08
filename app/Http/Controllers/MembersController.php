@@ -46,7 +46,7 @@ class MembersController extends Controller
             'phone' => $phone
         ]);
         return view('welcome');
-        //return redirect()->route('product.show');
+        //return redirect()->route('');
     }
 
     public function show()

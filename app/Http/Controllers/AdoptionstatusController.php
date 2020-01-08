@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\adoptionstatus;
+use App\application;
 use Illuminate\Http\Request;
 
 class AdoptionstatusController extends Controller
@@ -46,7 +47,8 @@ class AdoptionstatusController extends Controller
      */
     public function show(adoptionstatus $adoptionstatus)
     {
-        //
+        application::all();
+        return view('');
     }
 
     /**

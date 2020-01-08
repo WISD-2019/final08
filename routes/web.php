@@ -52,6 +52,9 @@ Route::get('/deleteanimal/{animal}', ['as' => 'staff.deleteanimal','uses' =>'Sta
 Route::get('/createpost', ['as' => 'post.create','uses' =>'PostController@create']);
 //儲存公告
 Route::get('/storepost', ['as' => 'post.store','uses' =>'PostController@store']);
-
-
+//審查領養訊息
+Route::get('/application', ['as' => 'application.show','uses' =>'ApplicationController@show']);
+//申請通過
+Route::get('/application/{application}/pass', ['as' => 'application.pass','uses' =>'ApplicationController@pass']);
+//查看領養狀況
 
