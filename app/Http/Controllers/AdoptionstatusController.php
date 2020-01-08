@@ -25,7 +25,7 @@ class AdoptionstatusController extends Controller
      */
     public function create()
     {
-        //
+        return view('createadoptionstatus');
     }
 
     /**
@@ -36,7 +36,15 @@ class AdoptionstatusController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $animal_id=$request->input('animal_id');
+        $status=$request->input('status');
+
+        adoptionstatus::create([
+            'animal_id' =>$animal_id,
+            'return_date' => date("Y-m-d",strtotime('8hours')),
+            'status' => $status,
+        ]);
+        return redirect()->route('member.refuge');
     }
 
     /**

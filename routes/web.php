@@ -40,6 +40,10 @@ Route::get('/application/create/{animal}', ['as' => 'applicaion.create','uses' =
 Route::get('/application/create/{animal}/store', ['as' => 'applicaion.store','uses' =>'ApplicationController@store']);
 //顯示領養公告
 Route::get('/post', ['as' => 'post.show','uses' =>'PostController@show']);
+//新增領養狀況
+Route::get('/adoptionstatus/create', ['as' => 'adoptionstatus.create','uses' =>'AdoptionstatusController@create']);
+//儲存領養狀況
+Route::get('/adoptionstatus/store', ['as' => 'adoptionstatus.store','uses' =>'AdoptionstatusController@store']);
 
 //收容所人員相關的功能
 //跳轉至新增收容動物畫面
