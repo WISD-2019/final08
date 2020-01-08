@@ -38,6 +38,8 @@ Route::get('/animal/search', ['as' => 'animal.search','uses' =>'AnimalController
 Route::get('/application/create/{animal}', ['as' => 'applicaion.create','uses' =>'ApplicationController@create']);
 //儲存領養資訊
 Route::get('/application/create/{animal}/store', ['as' => 'applicaion.store','uses' =>'ApplicationController@store']);
+//顯示領養公告
+Route::get('/post', ['as' => 'post.show','uses' =>'PostController@show']);
 
 //收容所人員相關的功能
 //跳轉至新增收容動物畫面
