@@ -57,7 +57,7 @@
                         <ul class="nav navbar-nav navbar-right cl-effect-15">
                             <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                             <li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
-                            <li><a class="page-scroll scroll" href="{{ route('post.show') }}">領養公告</a></li>
+                            <li><a class="page-scroll scroll" href="{{ route('post.show') }}">收容所公告</a></li>
                             <li><a class="page-scroll scroll" href="{{ route('animal.show') }}">動物列表</a></li>
                             <li><a class="page-scroll scroll" href="{{ route('shelter.show') }}">私、公家收容所資訊</a></li>
                             <li><a class="page-scroll scroll" href="{{ route('member.show') }}">會員專區</a></li>
@@ -101,7 +101,11 @@
     </div>
 </div>
 <!--/banner-section-->
-
+<div  class="w3ls-section w3-about">
+    <div  class="container">
+        @yield('content')
+    </div>
+</div>
 </body>
 
 </html>
