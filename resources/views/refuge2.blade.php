@@ -57,11 +57,11 @@
                         <ul class="nav navbar-nav navbar-right cl-effect-15">
                             <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                             <li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
-                            <li><a class="page-scroll scroll" href="{{ route('post.show') }}">收容所公告</a></li>
-                            <li><a class="page-scroll scroll" href="{{ route('animal.show') }}">動物列表</a></li>
-                            <li><a class="page-scroll scroll" href="{{ route('shelter.show') }}">私、公家收容所資訊</a></li>
-                            <li><a class="page-scroll scroll" href="{{ route('member.show') }}">會員專區</a></li>
-                            <li><a class="page-scroll scroll" href="{{ route('adoptionstatus.create') }}">新增領養狀況</a></li>
+                            <li><a class="page-scroll scroll" href="{{ route('post.create') }}">新增公告</a></li>
+                            <li><a class="page-scroll scroll" href="{{ route('staff.addanimal') }}">新增收容動物</a></li>
+                            <li><a class="page-scroll scroll" href="{{ route('shelter.animal') }}">管理收容動物</a></li>
+                            <li><a class="page-scroll scroll" href="{{ route('application.show') }}">審核領養申請</a></li>
+                            <li><a class="page-scroll scroll" href="{{ route('adoptionstatus.show') }}">追蹤領養訊息</a></li>
                             @if (Route::has('login'))
                                 @auth
                                     <li><a class="page-scroll scroll" href="{{ url('/home') }}">Home</a></li>

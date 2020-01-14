@@ -10,7 +10,7 @@
                         <input class="editContent" type="text" name="keyword" placeholder="尋找動物">
                         <input  type="submit" value="搜尋">
                         <div class="clearfix"></div>
-            </div>
+                    </div>
                 </form>
                 <table border=1>
                     <thead>

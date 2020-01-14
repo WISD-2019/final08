@@ -31,7 +31,7 @@ class MembersController extends Controller
         if($check == 1)
             return view('refuge');
         if($check ==2)
-            return view('welcome2');
+            return view('refuge2');
     }
 
     public function store(Request $request)

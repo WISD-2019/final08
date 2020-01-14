@@ -63,5 +63,5 @@ Route::get('/application', ['as' => 'application.show','uses' =>'ApplicationCont
 //申請通過
 Route::get('/application/{application}/pass', ['as' => 'application.pass','uses' =>'ApplicationController@pass']);
 //查看領養狀況
-Route::get('/adoptionstatus/show', ['as' => 'adoptionstatus.show','uses' =>'AdoptionstatusController@show']);
+Route::get('/adoptionstatusshow', ['as' => 'adoptionstatus.show','uses' =>'AdoptionstatusController@show']);
 
