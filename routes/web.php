@@ -25,25 +25,25 @@ Route::get('/home', 'HomeController@index')->name('home');
 //會員資料
 Route::get('/member', ['as' => 'member.show','uses' =>'MembersController@show']);
 //儲存會員資料
-Route::get('/member/store', ['as' => 'member.store','uses' =>'MembersController@store']);
+Route::get('/memberstore', ['as' => 'member.store','uses' =>'MembersController@store']);
 //修改會員資料
 Route::get('/member/update', ['as' => 'member.update','uses' =>'MembersController@update']);
 //顯示所有收容所
 Route::get('/shelter', ['as' => 'shelter.show','uses' =>'ShelterController@show']);
 //顯示所有動物
-Route::get('/animal/all', ['as' => 'animal.show','uses' =>'AnimalController@show']);
+Route::get('/animal', ['as' => 'animal.show','uses' =>'AnimalController@show']);
 //搜尋動物編號
-Route::get('/animal/search', ['as' => 'animal.search','uses' =>'AnimalController@search']);
+Route::get('/animalsearch', ['as' => 'animal.search','uses' =>'AnimalController@search']);
 //申請領養動物
-Route::get('/application/create/{animal}', ['as' => 'applicaion.create','uses' =>'ApplicationController@create']);
+Route::get('/applicationcreate{animal}', ['as' => 'applicaion.create','uses' =>'ApplicationController@create']);
 //儲存領養資訊
 Route::get('/application/create/{animal}/store', ['as' => 'applicaion.store','uses' =>'ApplicationController@store']);
 //顯示領養公告
 Route::get('/post', ['as' => 'post.show','uses' =>'PostController@show']);
 //新增領養狀況
-Route::get('/adoptionstatus/create', ['as' => 'adoptionstatus.create','uses' =>'AdoptionstatusController@create']);
+Route::get('/adoptionstatuscreate', ['as' => 'adoptionstatus.create','uses' =>'AdoptionstatusController@create']);
 //儲存領養狀況
-Route::get('/adoptionstatus/store', ['as' => 'adoptionstatus.store','uses' =>'AdoptionstatusController@store']);
+Route::get('/adoptionstatusstore', ['as' => 'adoptionstatus.store','uses' =>'AdoptionstatusController@store']);
 
 //收容所人員相關的功能
 //跳轉至新增收容動物畫面

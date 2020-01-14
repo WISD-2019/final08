@@ -34,7 +34,7 @@ class ApplicationController extends Controller
             'pose_date' => date("Y-m-d",strtotime('8hours')),
             'pass' => '0',
         ]);
-        return view('welcome');
+        return redirect()->route('member.refuge');
     }
 
 

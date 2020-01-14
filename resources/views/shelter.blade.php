@@ -1,100 +1,26 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>查看所有收容所</title>
-
-    <!-- Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
-
-    <!-- Styles -->
-    <style>
-        html, body {
-            background-color: #fff;
-            color: #636b6f;
-            font-family: 'Nunito', sans-serif;
-            font-weight: 200;
-            height: 100vh;
-            margin: 0;
-        }
-
-        .full-height {
-            height: 100vh;
-        }
-
-        .flex-center {
-            align-items: center;
-            display: flex;
-            justify-content: center;
-        }
-
-        .position-ref {
-            position: relative;
-        }
-
-        .top-right {
-            position: absolute;
-            right: 10px;
-            top: 18px;
-        }
-
-        .content {
-            text-align: center;
-        }
-
-        .title {
-            font-size: 84px;
-        }
-
-        .links > a {
-            color: #636b6f;
-            padding: 0 25px;
-            font-size: 13px;
-            font-weight: 600;
-            letter-spacing: .1rem;
-            text-decoration: none;
-            text-transform: uppercase;
-        }
-
-        .m-b-md {
-            margin-bottom: 30px;
-        }
-    </style>
-</head>
-<body>
-<div class="flex-center position-ref full-height">
-    @if (Route::has('login'))
-        <div class="top-right links">
-            @auth
-                <a href="{{ url('/home') }}">Home</a>
-                @else
-                    <a href="{{ route('login') }}">登入</a>
-
-                    @if (Route::has('register'))
-                        <a href="{{ route('register') }}">註冊</a>
-                    @endif
-                    @endauth
-        </div>
-    @endif
+@extends('refuge')
+@section('content')
+<div>
+    <div class="w3ls-title">
+        <h3 class="title">收容所資訊</h3>
+    </div>
         <div>
-            <table>
+            <table border=1>
                 <thead>
                 <tr>
-                    <th width="200" style="text-align: center">名稱</th>
-                    <th width="200" style="text-align: center">電話</th>
-                    <th width="200" style="text-align: center">地址</th>
-                    <th width="200" style="text-align: center">公/私立</th>
+                    <th width="200" height="50" style="text-align: center" valign="center">名稱</th>
+                    <th width="200" height="50" style="text-align: center" valign="center">電話</th>
+                    <th width="200" height="50" style="text-align: center" valign="center">地址</th>
+                    <th width="200" height="50" style="text-align: center" valign="center"">公/私立</th>
                 </tr>
                 </thead>
                 <tbody>
                 @foreach($shelters as $shelter)
                     <tr>
-                        <th style="text-align: center">{{$shelter->name}}</th>
-                        <th style="text-align: center">{{$shelter->phone}}</th>
-                        <th style="text-align: center">{{$shelter->address}}</th>
-                        <th style="text-align: center">
+                        <th height="50" style="text-align: center" valign="center">{{$shelter->name}}</th>
+                        <th height="50" style="text-align: center" valign="center">{{$shelter->phone}}</th>
+                        <th height="50" style="text-align: center" valign="center">{{$shelter->address}}</th>
+                        <th height="50" style="text-align: center" valign="center">
                             @if($shelter->public === 1)
                                 公立
                             @else
@@ -108,7 +34,6 @@
         </div>
 
 </div>
-</body>
-</html>
+@stop
 
 

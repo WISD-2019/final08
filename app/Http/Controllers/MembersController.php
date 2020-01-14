@@ -29,7 +29,7 @@ class MembersController extends Controller
         }
         $check =Auth::user()->type;
         if($check == 1)
-            return view('welcome');
+            return view('refuge');
         if($check ==2)
             return view('welcome2');
     }
