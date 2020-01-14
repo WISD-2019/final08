@@ -25,7 +25,7 @@ class MembersController extends Controller
     public function refuge()
     {
         if(Auth::user()==null){
-            return view('welcome');
+            return view('refuge');
         }
         $check =Auth::user()->type;
         if($check == 1)
