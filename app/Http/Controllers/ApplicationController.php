@@ -69,7 +69,9 @@ class ApplicationController extends Controller
         $application->review_date=date("Y-m-d",strtotime('8hours'));
         $application->pass = '1';
         $application->pass_opinion=$pass_opinion;
-
+        $animal = animal::find($application->animal_id);
+        $animal->member_id = $application->member_id;
+        $animal->save();
         $application->save();
         return redirect()->route('application.show');
     }

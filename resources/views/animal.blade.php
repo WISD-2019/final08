@@ -31,7 +31,11 @@
                             <th height="50" style="text-align: center" valign="center">{{$animal->gender}}</th>
                             <th height="50" style="text-align: center" valign="center">{{$animal->age}}</th>
                             <th height="50" style="text-align: center" valign="center">{{$animal->size}}</th>
-                            <th height="50" style="text-align: center" valign="center"><a  href="/applicationcreate{{$animal->id}}">申請領養</a></th>
+                            @if($animal->member_id === null)
+                                <th height="50" style="text-align: center" valign="center"><a  href="/applicationcreate{{$animal->id}}">申請領養</a></th>
+                            @else
+                                <th height="50" style="text-align: center" valign="center">已被領養</th>
+                            @endif
                         </tr>
                     @endforeach
                     </tbody>
