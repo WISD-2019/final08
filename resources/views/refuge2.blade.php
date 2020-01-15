@@ -86,14 +86,14 @@
             <div class="container">
                 <div class="banner-text">
                     <h2 class="editContent">Refuge</h2>
-                    <p>Donec rutrum lacinia consequat. Nunc id dui vitae urna tincidunt varius.</p>
+                    <p>SEE the animal</p>
                 </div>
             </div>
         </div>
         <!-- //banner-info-->
         <div class="slides-box">
             <ul class="slides">
-                <li style="background: url(images/cat3.jpg) no-repeat;background-size:cover;"></li>
+                <li style="background: url(images/cat5.jfif) no-repeat;background-size:cover;"></li>
 
             </ul>
         </div>
