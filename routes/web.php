@@ -71,4 +71,7 @@ Route::get('/addshelter', ['as' => 'admin.addshelter','uses' =>'AdminController@
 //儲存收容所
 Route::get('/storeshelter', ['as' => 'admin.storeshelter','uses' =>'AdminController@storeshelter']);
 //顯示所有收容所
-Route::get('/shelter', ['as' => 'admin.shelter','uses' =>'AdminController@shelter']);
+Route::get('/adminshelter', ['as' => 'admin.shelter','uses' =>'AdminController@shelter']);
+//刪除收容所
+Route::get('/deleteshelter/{shelter}', ['as' => 'admin.deleteshelter','uses' =>'AdminController@deleteshelter']);
+

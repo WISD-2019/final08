@@ -110,6 +110,14 @@ class AdminController extends Controller
 
     public function shelter()
     {
-
+        $shelters = shelter::all();
+        $data = ['shelters' => $shelters];
+        return view('adminshelter',$data);
+    }
+    public function deleteshelter($id)
+    {
+        $shelters = shelter::find($id);
+        $shelters->delete();
+        return redirect()->route('admin.shelter');
     }
 }

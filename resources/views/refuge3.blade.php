@@ -58,7 +58,7 @@
                             <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
                             <li class="hidden"><a class="page-scroll" href="#page-top"></a>	</li>
                             <li><a class="page-scroll scroll" href="{{ route('admin.addshelter') }}">新增收容所</a></li>
-                            <li><a class="page-scroll scroll" href="{{ route('admin.shelter') }}">管理收容動物</a></li>
+                            <li><a class="page-scroll scroll" href="{{ route('admin.shelter') }}">管理收容所</a></li>
                             @if (Route::has('login'))
                                 @auth
                                     <li><a class="page-scroll scroll" href="{{ url('/home') }}">Home</a></li>
