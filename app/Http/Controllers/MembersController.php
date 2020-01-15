@@ -32,6 +32,8 @@ class MembersController extends Controller
             return view('refuge');
         if($check ==2)
             return view('refuge2');
+        if($check ==3)
+            return view('refuge3');
     }
 
     public function store(Request $request)

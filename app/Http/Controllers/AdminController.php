@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\admin;
+use App\shelter;
 use Illuminate\Http\Request;
 
 class AdminController extends Controller
@@ -81,5 +82,34 @@ class AdminController extends Controller
     public function destroy(admin $admin)
     {
         //
+    }
+
+    public function addshelter()
+    {
+        return view('addshelter');
+    }
+
+    public function storeshelter(Request $request)
+    {
+        $name=$request->input('name');
+        $phone=$request->input('phone');
+        $address=$request->input('address');
+        $public=$request->input('public');
+        if($public=='公立')
+            $publics=1;
+        else
+            $publics=0;
+        shelter::create([
+            'name' => $name,
+            'phone' => $phone,
+            'address' => $address,
+            'public' => $publics,
+        ]);
+        return redirect()->route('member.refuge');
+    }
+
+    public function shelter()
+    {
+
     }
 }

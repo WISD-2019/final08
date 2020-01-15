@@ -10,7 +10,7 @@ class shelter extends Model
     protected $table = 'shelters';
 
     protected $fillable = [
-        'user_id', 'name', 'phone','address','public'
+        'name', 'phone','address','public'
     ];
 
     public $timestamps = false;

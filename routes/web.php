@@ -65,3 +65,10 @@ Route::get('/application/{application}/pass', ['as' => 'application.pass','uses'
 //查看領養狀況
 Route::get('/adoptionstatusshow', ['as' => 'adoptionstatus.show','uses' =>'AdoptionstatusController@show']);
 
+//網站管理人員相關功能
+//跳轉至新增收容所畫面
+Route::get('/addshelter', ['as' => 'admin.addshelter','uses' =>'AdminController@addshelter']);
+//儲存收容所
+Route::get('/storeshelter', ['as' => 'admin.storeshelter','uses' =>'AdminController@storeshelter']);
+//顯示所有收容所
+Route::get('/shelter', ['as' => 'admin.shelter','uses' =>'AdminController@shelter']);
